@@ -16,12 +16,12 @@ function renderCartItems() {
             cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
         } else {
             const productMap = {
-                1: { name: 'Galvanized Perforated Metal Sheets', price: 4500 },
-                2: { name: 'MIG Wire', price: 4500 },
-                3: { name: 'Welding Rods', price: 4500 },
-                4: { name: 'MIG Wire', price: 4500 },
-                5: { name: 'Welding Rods', price: 4500 },
-                6: { name: 'MIG Wire', price: 4500 },
+                1: { name: 'Galvanized Perforated Metal Sheets', price: 4500, image: 'assets/images/GPMS1.jpg' },
+                2: { name: 'MIG Wire', price: 4500, image: 'assets/images/migwire2.jpg' },
+                3: { name: 'Welding Rods', price: 4500, image: 'assets/images/electrodes2.jpg' },
+                4: { name: 'MIG Wire', price: 4500, image: 'assets/images/migwire2.jpg' },
+                5: { name: 'Welding Rods', price: 4500, image: 'assets/images/electrodes2.jpg' },
+                6: { name: 'MIG Wire', price: 4500, image: 'assets/images/migwire2.jpg' },
             };
 
             let cartHTML = '';
@@ -32,6 +32,7 @@ function renderCartItems() {
                 if (product) {
                     cartHTML += `
                         <div class="cart_item">
+                            <img src="${product.image}" alt="${product.name}">
                             <p><strong>${product.name}</strong></p>
                             <p>Price: Ksh ${product.price}</p>
                         </div>
@@ -43,7 +44,6 @@ function renderCartItems() {
             cartHTML += `<p class="cart_total"><strong>Total: Ksh ${cartTotal}</strong></p>`;
             cartItemsContainer.innerHTML = cartHTML;
 
-            // Update Checkout Link
             const orderDetails = cart
                 .map((productID) => {
                     const product = productMap[productID];
@@ -54,6 +54,7 @@ function renderCartItems() {
         }
     }
 }
+
 
 // Add to Cart
 document.addEventListener('click', function (e) {
