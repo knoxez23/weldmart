@@ -18,7 +18,6 @@ $product = $products[$productID];
 <head>
     <?php include 'partials/head.php'; ?>
     <title><?= $product['name'] ?> | Weldmart</title>
-    <link rel="stylesheet" href="assets/css/product.css">
 </head>
 
 <body>
@@ -82,9 +81,9 @@ $product = $products[$productID];
                             <h3 class="product_name"><?= $related['name'] ?></h3>
                         </a>
                         <p class="product_description"><?= $related['description'] ?></p>
-                        <span>Ksh <?= $related['price'] ?></span>
+                        <span>Ksh <?= $related['price'] ?></span> <?= $id ?>
                     </div>
-                    <button class="add_to_cart_button" data-id="<?= $id ?>">Add to Cart</button>
+                    <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $id ?>">Add to Cart</button>
                 </div>
             <?php endforeach; ?>
         </div>
