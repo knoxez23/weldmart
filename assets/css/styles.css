@@ -685,6 +685,7 @@ footer .footer_bottom .developer_text span {
 }
 
 .related_products {
+    border-top:  1px solid rgba(193, 213, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -919,6 +920,10 @@ input {
     }
 
     /* ---- */
+
+    .products_grid, .related_products .products_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     /* About Us Page */
 
