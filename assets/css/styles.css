@@ -1133,7 +1133,7 @@ input {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 50px;
+        gap: 10px;
     }
 
     footer .footer_top .footer_right .footer_links a {
@@ -1148,6 +1148,9 @@ input {
         padding: 20px 0 15px 15px;
         margin: 0;
         font-size: 14px;
+        display:  flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     /* Products Page */
