@@ -81,7 +81,7 @@ $product = $products[$productID];
                             <h3 class="product_name"><?= $related['name'] ?></h3>
                         </a>
                         <p class="product_description"><?= $related['description'] ?></p>
-                        <span>Ksh <?= $related['price'] ?></span> <?= $id ?>
+                        <span>Ksh <?= $related['price'] ?></span>
                     </div>
                     <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $id ?>">Add to Cart</button>
                 </div>
