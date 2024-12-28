@@ -1,13 +1,15 @@
 // Manage Cart Logic
 let cart = JSON.parse(localStorage.getItem('cart')) || {};
-const cartCounter = document.getElementById('cart-counter');
+const cartCounters = document.querySelectorAll('#cart-counter');
 const cartItemsContainer = document.getElementById('cart-items');
 const checkoutLink = document.getElementById('checkout-link');
 
 // Update Cart Counter
 function updateCartCounter() {
     const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
-    cartCounter.textContent = totalItems;
+    cartCounters.forEach(counter => {
+        counter.textContent = totalItems;
+    });
 }
 
 // Render Cart Items
