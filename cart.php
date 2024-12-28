@@ -17,7 +17,7 @@
             </a>
             
             <!-- Clear Cart Button -->
-            <button id="clear-cart" class="clear_cart_button">Clear Cart</button>
+            <button id="clear-cart" class="clear_cart_button"><i class="fa-solid fa-trash" style="color: #ffffff;"></i> Clear Cart</button>
         </div>
 
     </section>
