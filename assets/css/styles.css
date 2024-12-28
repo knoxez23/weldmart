@@ -1136,6 +1136,10 @@ input {
         gap: 10px;
     }
 
+    footer .footer_top .footer_right .footer_links {
+        word-wrap: break-word;
+    }
+
     footer .footer_top .footer_right .footer_links a {
         font-size: 14px;
     }
