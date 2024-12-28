@@ -1206,6 +1206,7 @@ input {
     }
 
     .contact .contact_form {
+        width: 100%;
         padding: 20px;
         margin: 15px;
         gap: 10px;
@@ -1213,5 +1214,9 @@ input {
 
     .contact .contact_form .contact_heading {
         font-size: 18px;
+    }
+
+    .contact .contact_form .names {
+        flex-direction: column;
     }
 }
