@@ -1,21 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carouselImages = document.querySelectorAll('.carousel_image');
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const prevButton = document.querySelector('.carousel_control.prev');
+    const nextButton = document.querySelector('.carousel_control.next');
+
     let currentIndex = 0;
 
+    // Display image based on index
     function showImage(index) {
-        carouselImages.forEach((img, i) => {
-            img.style.display = i === index ? 'block' : 'none';
-        });
+        const selectedThumbnail = thumbnails[index];
+        mainImage.src = selectedThumbnail.src;
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        selectedThumbnail.classList.add('active');
     }
 
-    // Ensure the first image is visible initially
-    if (carouselImages.length > 0) {
-        showImage(currentIndex);
-
-        // Cycle through images every 3 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % carouselImages.length;
+    // Thumbnail click event
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            currentIndex = index;
             showImage(currentIndex);
-        }, 3000); // Change every 3 seconds
-    }
+        });
+    });
+
+    // Next button click
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % thumbnails.length;
+        showImage(currentIndex);
+    });
+
+    // Previous button click
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+        showImage(currentIndex);
+    });
 });
