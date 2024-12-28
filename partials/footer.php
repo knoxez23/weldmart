@@ -59,4 +59,18 @@
         this.classList.toggle('active');
         mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
     });
+    // Toast Notification Function
+    function showToast(message, type = 'success') {
+        const toastContainer = document.getElementById('toast-container');
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+
+        toastContainer.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 4000);
+    }
 </script>

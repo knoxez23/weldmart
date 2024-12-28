@@ -61,7 +61,7 @@ document.addEventListener('click', function (e) {
         cart[productID] = (cart[productID] || 0) + 1;
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartCounter();
-        alert('Product added to cart!');
+        showToast('Product added to cart!', 'success');
     }
 });
 
@@ -82,7 +82,7 @@ document.addEventListener('click', function (e) {
         updateCartCounter();
         renderCartItems();
         
-        alert('Your cart has been cleared!');
+        showToast('Your cart has been cleared!', 'success');
     }
 });
 

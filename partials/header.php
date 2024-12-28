@@ -68,3 +68,5 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
         <li><a href="contact.php" class="<?= $currentPage == 'contact.php' ? 'active' : '' ?>">Contact</a></li>
     </ul>
 </div>
+
+<div id="toast-container"></div>
