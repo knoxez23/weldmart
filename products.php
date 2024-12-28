@@ -36,7 +36,7 @@ $products = [
                         <p class="product_description"><?= $product['description'] ?></p>
                         <span>Ksh <?= $product['price'] ?></span>
                     </div>
-                    <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $productID ?>">Add to Cart</button>
+                    <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $product['id'] ?>">Add to Cart</button>
                 </div>
             <?php endforeach; ?>
         </div>

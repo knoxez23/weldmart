@@ -15,7 +15,11 @@
             <a id="checkout-link" target="_blank">
                 <button class="checkout_button">Checkout with WhatsApp</button>
             </a>
+            
+            <!-- Clear Cart Button -->
+            <button id="clear-cart" class="clear_cart_button">Clear Cart</button>
         </div>
+
     </section>
     <?php include 'partials/footer.php'; ?>
 </body>

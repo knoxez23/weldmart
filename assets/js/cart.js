@@ -1,18 +1,19 @@
 // Manage Cart Logic
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || {};
 const cartCounter = document.getElementById('cart-counter');
 const cartItemsContainer = document.getElementById('cart-items');
 const checkoutLink = document.getElementById('checkout-link');
 
 // Update Cart Counter
 function updateCartCounter() {
-    cartCounter.textContent = cart.length;
+    const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+    cartCounter.textContent = totalItems;
 }
 
 // Render Cart Items
 function renderCartItems() {
     if (cartItemsContainer) {
-        if (cart.length === 0) {
+        if (Object.keys(cart).length === 0) {
             cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
         } else {
             const productMap = {
@@ -26,41 +27,38 @@ function renderCartItems() {
 
             let cartHTML = '';
             let cartTotal = 0;
+            let orderDetails = [];
 
-            cart.forEach((productID) => {
+            Object.keys(cart).forEach((productID) => {
                 const product = productMap[productID];
+                const quantity = cart[productID];
                 if (product) {
                     cartHTML += `
                         <div class="cart_item">
                             <img src="${product.image}" alt="${product.name}">
                             <p><strong>${product.name}</strong></p>
-                            <p>Price: Ksh ${product.price}</p>
+                            <p>Price: Ksh ${product.price} x ${quantity}</p>
+                            <p>Total: Ksh ${product.price * quantity}</p>
                         </div>
                     `;
-                    cartTotal += product.price;
+                    cartTotal += product.price * quantity;
+                    orderDetails.push(`${product.name} (x${quantity}) - Ksh ${product.price * quantity}`);
                 }
             });
 
             cartHTML += `<p class="cart_total"><strong>Total: Ksh ${cartTotal}</strong></p>`;
             cartItemsContainer.innerHTML = cartHTML;
-
-            const orderDetails = cart
-                .map((productID) => {
-                    const product = productMap[productID];
-                    return product ? `${product.name} - Ksh ${product.price}` : '';
-                })
-                .join('%0A');
-            checkoutLink.href = `https://wa.me/+254711288688?text=Order%20Details:%0A${orderDetails}%0ATotal:%20Ksh%20${cartTotal}`;
+            
+            checkoutLink.href = `https://wa.me/+254711288688?text=Order%20Details:%0A${orderDetails.join('%0A')}%0ATotal:%20Ksh%20${cartTotal}`;
         }
     }
 }
-
 
 // Add to Cart
 document.addEventListener('click', function (e) {
     if (e.target.id === 'add-to-cart') {
         const productID = e.target.getAttribute('data-id');
-        cart.push(productID);
+        cart[productID] = (cart[productID] || 0) + 1;
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartCounter();
         alert('Product added to cart!');
@@ -70,3 +68,21 @@ document.addEventListener('click', function (e) {
 // Initialize Cart
 updateCartCounter();
 renderCartItems();
+
+// Clear Cart Logic
+document.addEventListener('click', function (e) {
+    if (e.target.id === 'clear-cart') {
+        // Clear cart from localStorage
+        localStorage.removeItem('cart');
+        
+        // Reset the cart variable
+        cart = {};
+
+        // Update cart counter and render an empty cart message
+        updateCartCounter();
+        renderCartItems();
+        
+        alert('Your cart has been cleared!');
+    }
+});
+
