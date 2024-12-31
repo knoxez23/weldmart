@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel_control.next');
 
     let currentIndex = 0;
+    let autoSwitchInterval;
 
     // Display image based on index
     function showImage(index) {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         thumb.addEventListener('click', () => {
             currentIndex = index;
             showImage(currentIndex);
+            resetAutoSwitch();
         });
     });
 
@@ -26,11 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % thumbnails.length;
         showImage(currentIndex);
+        resetAutoSwitch();
     });
 
     // Previous button click
     prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
         showImage(currentIndex);
+        resetAutoSwitch();
     });
+
+    // Auto-switch images every 3 seconds
+    function startAutoSwitch() {
+        autoSwitchInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % thumbnails.length;
+            showImage(currentIndex);
+        }, 3000);
+    }
+
+    // Reset auto-switch timer
+    function resetAutoSwitch() {
+        clearInterval(autoSwitchInterval);
+        startAutoSwitch();
+    }
+
+    // Start auto-switch on load
+    startAutoSwitch();
 });

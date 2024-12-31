@@ -171,7 +171,7 @@ header {
     position: sticky;
     z-index: 1000;
     top: 0;
-    padding: 0 30px;
+    padding: 5px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1024,7 +1024,7 @@ footer .footer_bottom .developer_text span {
 .contact {
     margin: 30px 0;
     padding: 30px 0;
-    background-color: #aec9fe28;
+    /* background-color: #aec9fe28; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1035,19 +1035,37 @@ footer .footer_bottom .developer_text span {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 30px 50px;
-    border-radius: 20px;
+    padding: 50px 25px;
+    border-radius: 5px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+::placeholder {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+textarea {
+    border: none;
+    background-color: #FAA71E;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact_form p {
+    color: #FAA71E;
+    font-weight: bold;
 }
 
 .contact .contact_form .contact_heading {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-.contact .contact_form .names {
+.contact .contact_form .names , .contact .contact_form .email {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1056,7 +1074,6 @@ footer .footer_bottom .developer_text span {
 
 .first_name,
 .last_name,
-.email,
 .subject {
     display: flex;
     flex-direction: column;
@@ -1068,8 +1085,17 @@ label {
 }
 
 input {
+    border: none;
+    border-radius: 5px;
     padding: 10px;
-    border: 1px solid #6E7C96;
+    background-color: #FAA71E;
+}
+
+.contact .contact_form button {
+    background-color: #FAA71E;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }
 
 /* Contact Us End */
