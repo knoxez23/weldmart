@@ -1339,8 +1339,8 @@ input {
 
     footer .footer_top {
         flex-direction: column;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     footer .footer_top .footer_left {
