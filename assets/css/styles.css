@@ -1339,14 +1339,13 @@ input {
 
     footer .footer_top {
         flex-direction: column;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     footer .footer_top .footer_left {
         width: 90%;
     }
-
     footer .footer_top .footer_left .footer_logo {
         width: 100px;
         height: 100px;
