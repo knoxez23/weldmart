@@ -267,10 +267,9 @@ header .nav_links a:hover {
     position: sticky;
     z-index: 1000;
     top: 0;
-    padding: 0 15px;
+    padding: 10 15px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
 }
 
 .mobile-header .header_logo {
