@@ -1425,4 +1425,8 @@ input {
     .contact .contact_form .names {
         flex-direction: column;
     }
+
+    .contact .contact_form .email {
+        flex-direction: column;
+    }
 }
