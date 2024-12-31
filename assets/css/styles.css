@@ -1424,9 +1424,11 @@ input {
 
     .contact .contact_form .names {
         flex-direction: column;
+        gap: 5px;
     }
 
     .contact .contact_form .email {
         flex-direction: column;
+        gap: 5px;
     }
 }
