@@ -50,7 +50,7 @@ button {
 
 .add_to_cart_button {
     padding: 10px 20px;
-    background-color: #4a86fd;
+    background-color: #FAA71E;
     color: white;
     border: none;
     border-radius: 5px;
@@ -58,10 +58,8 @@ button {
 }
 
 .add_to_cart_button:hover {
-    background-color: white;
-    border: 2px solid #4a86fd;
+    background-color: black;
     transition: ease-in 0.2s;
-    color: #4a86fd;
 }
 
 #toast-container {
@@ -241,7 +239,7 @@ header .nav_links a:hover {
 
 .cart_icon a i:hover {
     transition: ease-in-out 0.2s;
-    color: #07047A;
+    color: white;
     cursor: pointer;
 }
 
@@ -251,7 +249,7 @@ header .nav_links a:hover {
 
 .whatsapp_icon a i:hover {
     transition: ease-in-out 0.2s;
-    color: #07047A;
+    color: white;
     cursor: pointer;
 }
 
@@ -755,12 +753,25 @@ footer .footer_bottom .developer_text span {
     gap: 30px;
 }
 
+.products_container_top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.products_container .divider {
+    width: 55%;
+    height: 3px;
+    background-color: #FAA71E;
+}
+
 .products_heading {
     width: fit-content;
     padding: 5px 40px;
-    background-color: #FF924F;
     border-radius: 20px;
-    color: white;
+    color: #FAA71E;
     font-size: 18px;
     text-align: center;
 }
@@ -778,16 +789,16 @@ footer .footer_bottom .developer_text span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 4px 6px 1px #2c7a8e82;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .products_grid .product_card .product_image,
 .related_products .products_grid .product_card .product_image {
     height: 250px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .products_grid .product_card .product_image:hover,
@@ -799,7 +810,7 @@ footer .footer_bottom .developer_text span {
 .related_products .products_grid .product_card .product_image img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .products_grid .product_card .product_details {
@@ -823,6 +834,13 @@ footer .footer_bottom .developer_text span {
     align-items: start;
     text-align: left;
     gap: 10px;
+}
+
+.product_details .product_details_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 .products_grid .product_card .product_buy_btn {
@@ -922,7 +940,7 @@ footer .footer_bottom .developer_text span {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: 1px 4px 5px #2d548168;
+    box-shadow: 1px 3px 5px #2d54813b;
 }
 
 .product_description {

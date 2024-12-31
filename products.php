@@ -20,7 +20,11 @@ $products = [
 <body>
     <?php include 'partials/header.php'; ?>
     <section class="products_container">
-        <h2 class="products_heading">All Products</h2>
+        <div class="products_container_top">
+            <div class="divider"></div>
+            <h2 class="products_heading">All Products</h2>
+            <div class="divider"></div>
+        </div>
         <div class="products_grid">
             <?php foreach ($products as $product): ?>
                 <div class="product_card">
@@ -30,13 +34,18 @@ $products = [
                         </a>
                     </div>
                     <div class="product_details">
-                        <a href="product.php?id=<?= $product['id'] ?>" class="product_view_btn">
-                            <h3 class="product_name"><?= $product['name'] ?></h3>
-                        </a>
-                        <p class="product_description"><?= $product['description'] ?></p>
-                        <span>Ksh <?= $product['price'] ?></span>
+                        <div class="product_details_top">
+                            <a href="product.php?id=<?= $product['id'] ?>" class="product_view_btn">
+                                <h3 class="product_name"><?= $product['name'] ?></h3>
+                            </a>
+                            <p class="product_description"><?= $product['description'] ?></p>
+                        </div>
+                        
+                        <div class="product_details_bottom">
+                            <span>Ksh <?= $product['price'] ?></span>
+                            <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $product['id'] ?>">Add to Cart</button>
+                        </div>
                     </div>
-                    <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $product['id'] ?>">Add to Cart</button>
                 </div>
             <?php endforeach; ?>
         </div>

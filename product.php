@@ -77,13 +77,17 @@ $product = $products[$productID];
                         </a>
                     </div>
                     <div class="product_details">
-                        <a href="product.php?id=<?= $id ?>" class="product_view_btn">
-                            <h3 class="product_name"><?= $related['name'] ?></h3>
-                        </a>
-                        <p class="product_description"><?= $related['description'] ?></p>
-                        <span>Ksh <?= $related['price'] ?></span>
+                        <div class="product_details_top">
+                            <a href="product.php?id=<?= $id ?>" class="product_view_btn">
+                                <h3 class="product_name"><?= $related['name'] ?></h3>
+                            </a>
+                            <p class="product_description"><?= $related['description'] ?></p>
+                        </div>
+                        <div class="product_details_bottom">
+                            <span>Ksh <?= $related['price'] ?></span>
+                            <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $id ?>">Add to Cart</button>
+                        </div>
                     </div>
-                    <button id="add-to-cart" class="add_to_cart_button" data-id="<?= $id ?>">Add to Cart</button>
                 </div>
             <?php endforeach; ?>
         </div>
