@@ -270,6 +270,7 @@ header .nav_links a:hover {
     padding: 0 15px;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .mobile-header .header_logo {
