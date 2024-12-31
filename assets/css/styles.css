@@ -285,7 +285,7 @@ header .nav_links a:hover {
 
 .mobile-header .header_icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
 }
 
