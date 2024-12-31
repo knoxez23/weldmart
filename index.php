@@ -23,43 +23,51 @@
     </section>
 
     <section class="product_categories">
-        <h2>Product Categories</h2>
+        <div class="product_categories_top">
+            <div class="divider"></div>
+            <h2>Product Categories</h2>
+            <div class="divider"></div>
+        </div>
         <div class="categories_container">
             <div class="category_card">
                 <div class="card_image">
-                    <img src="assets/images/Welding Rods Image.png" alt="Buy now Welding Rods for Sale Kenya and East Africa">
+                    <img src="assets/images/electrodes-cat.jpg" alt="Buy now Welding Rods for Sale Kenya and East Africa">
                 </div>
                 <div class="card_text">
                     <h3>Welding Rods</h3>
-                    <p>AWS E6013: Reliable and versatile welding rods available in 3.2mm, 2.5mm, and convenient 5kg x 4 box packaging for professional-grade welding performance.</p>
-                    <a href="products.php">Buy Now</a>
+                    
+                    <a href="products.php"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="category_card">
                 <div class="card_image">
-                    <img src="assets/images/MIG Wire Image.png" alt="Buy now MIG Wire for Sale Kenya and East Africa">
+                    <img src="assets/images/mig-cat.jpg" alt="Buy now MIG Wire for Sale Kenya and East Africa">
                 </div>
                 <div class="card_text">
                     <h3>MIG Wire</h3>
-                    <p>AWS ER70S-6: High-quality MIG wire in 1.0mm, 1.2mm, and 0.8mm diameters, packed in durable 15kg spools for smooth and consistent welding results.</p>
-                    <a href="products.php">Buy Now</a>
+                    
+                    <a href="products.php"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="category_card">
                 <div class="card_image">
-                    <img src="assets/images/GPMS Image.png" alt="Buy now Galvanized Perforated Metal Sheets for sale Kenya and East Africa">
+                    <img src="assets/images/GPMS-cat.jpg" alt="Buy now Galvanized Perforated Metal Sheets for sale Kenya and East Africa">
                 </div>
                 <div class="card_text">
-                    <h3>Galvanized Perforated Metal Sheets</h3>
-                    <p>Premium galvanized metal sheets with precise 5.0mm and 2.0mm hole diameters, ideal for industrial and construction applications</p>
-                    <a href="products.php">Buy Now</a>
+                    <h3>GPMS</h3>
+                    
+                    <a href="products.php"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="why_choose_us">
-        <h4>Why Choose Us</h4>
+        <div class="choose_us_top">
+            <div class="divider"></div>
+            <h4>Why Choose Us</h4>
+            <div class="divider"></div>
+        </div>
         <div class="choose_card_container">
             <div class="choose_card">
                 <div class="card_image1">
