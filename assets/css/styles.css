@@ -243,13 +243,16 @@ header .nav_links a:hover {
     cursor: pointer;
 }
 
-.whatsapp_icon a i {
-    color: #FAA71E;
+.whatsapp_icon a {
+    background-color: rgb(30, 186, 30);
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.whatsapp_icon a i:hover {
+.whatsapp_icon a:hover {
     transition: ease-in-out 0.2s;
-    color: white;
+    color: rgb(30, 186, 30);
+    background-color: white;
     cursor: pointer;
 }
 
@@ -294,9 +297,12 @@ header .nav_links a:hover {
     cursor: pointer;
 }
 
-.mobile-header .cart_icon a i,
+.mobile-header .whatsapp_icon a {
+    padding: 5px;
+}
+
 .mobile-header .whatsapp_icon a i {
-    color: #ff924f;
+    background-color: rgb(30, 186, 30);
 }
 
 .mobile-header .cart_icon a i:hover,
@@ -352,7 +358,7 @@ header .nav_links a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* box-shadow: inset 500px 700px #faa61e83; */
+    box-shadow: inset 500px 700px rgba(0, 0, 0, 0.5);
     height: auto;
     /* margin: 20px 0; */
     margin-bottom: 20px;
@@ -366,8 +372,8 @@ header .nav_links a:hover {
 }
 
 .hero_section .hero_text {
-    background-color: #256dffda;
-    width: 28%;
+    /* background-color: #256dffda; */
+    width: 50%;
     height: 100%;
     padding: 40px;
     display: flex;
@@ -378,8 +384,12 @@ header .nav_links a:hover {
 }
 
 .hero_section .hero_text .hero_text_top h1 {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 500;
+}
+
+.hero_section .hero_text .hero_text_top p {
+    font-size: 22px;
 }
 
 .hero_section .hero_text .hero_button_bottom {
@@ -1136,6 +1146,11 @@ input {
         padding: 20px;
     }
 
+    .hero_text_top h3 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
     .hero_section .hero_image {
         width: auto;
     }
@@ -1254,13 +1269,17 @@ input {
     }
 
     .hero_section .hero_text {
-        background-image: url(../images/weld_hero.png);
+        /* background-image: url(../images/weld_hero.png); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         width: 100%;
         padding: 20px;
-        box-shadow: 0 350px inset #4a86fd55;
+    }
+
+    .hero_text_top h1 {
+        font-size: 24px;
+        font-weight: 500;
     }
 
     .hero_section .hero_text .hero_button_bottom {

@@ -17,9 +17,9 @@
                 Explore Our Products
             </a>
         </div>
-        <div class="hero_image">
+        <!-- <div class="hero_image">
             <img src="assets/images/weld_hero.png" alt="Welding Image">
-        </div>
+        </div> -->
     </section>
 
     <section class="product_categories">

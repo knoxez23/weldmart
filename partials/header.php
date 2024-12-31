@@ -29,7 +29,7 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
         <div>
             <div class="whatsapp_icon">
                 <a href="http://wa.me/+254711288688" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-whatsapp fa-xl"></i>
+                    <i class="fa-brands fa-square-whatsapp fa-xl"></i> GET A QUOTE
                 </a>
             </div>
         </div>
